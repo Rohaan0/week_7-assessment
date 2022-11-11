@@ -1,0 +1,43 @@
+// Timing results:
+
+- double Append was a lot faster then double insert
+
+~extraLargeArray~
+    1. 'Double append: 3.512625ms
+        'Insert append: 767.687375ms
+~largeArray~
+    2. 'insert 6.776209 ms
+        'append 420.917 μs
+~mediumArray~
+    3. 'insert 123.334 μs
+        'append 92.875 μs
+
+-Here double insert is faster than append
+
+~smallArray~
+    4. 'insert 21.667 μs
+        'append 56.334 μs
+~tinyArray
+    5. 'insert 21.667 μs
+        'append 56.334 μs
+
+
+_____Analysis_____
+
+|   The results show, that the smaller arrays (smallArray and tinyArray), faster because there are less items being used.
+| The results also show here that doubleInsert is faster than doubleAppend, this is because of how the unshift method works in 
+| comparison to the push method. Unshift is slower because it needs to unshift all the elements to the left once the first element is
+| added. When the size of the array increases to does the time it takes to insert it all in, but if there is very few elements its
+| very quick. Doubleappend on the other hand is an O(n) wheres it stays on a linear space Complexity making it eventually more
+| sustainable then doubleInsert.
+|   
+| In conclusion, doubleAppend is more efficient than doubleInsert
+|
+|
+|
+|
+ 
+
+ DoubleAppend: O(n)
+
+ DoubleInsert: O(log n)
